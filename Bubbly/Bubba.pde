@@ -15,8 +15,9 @@ class Bubble
    
     pos.y --;
     
+    if(pos.y <(0-size*0.5)){pos.y = (height+size*0.5);
   }
- 
+  }
   void Render(){
     
     ellipse(pos.x, pos.y, size, size);

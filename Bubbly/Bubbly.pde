@@ -1,4 +1,5 @@
 
+float pressure = 9.05;
 Bubble[] b = new Bubble[100];
 
 void setup(){

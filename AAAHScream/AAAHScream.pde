@@ -26,6 +26,7 @@ void setup() {
 
 void draw() {
   background(0);
+
   float currentVolume = amp.analyze();
   if(currentVolume > screamThreshold){
      image(sillyimg, width/2, height/2);
@@ -37,4 +38,8 @@ void draw() {
  x.Update();
  x.Render();
  }
+  rect(0,0,width,10);
+  rect(0,0,10,height);
+  rect(width,0,-10,height);
+  rect(0,height,width,-10);
 }

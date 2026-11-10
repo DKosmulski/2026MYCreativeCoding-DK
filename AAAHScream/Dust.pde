@@ -1,11 +1,11 @@
 class Dust
 {
   
-  PVector pos;
-  int size;
-  float speed =0;
+  PVector pos; //dust location change
+  int size; //dust size
+  float speed =0; //dust movement speed
   
-  Dust(float x, float y, int size){
+  Dust(float x, float y, int size){ //dust location
    
     pos = new PVector(x,y);
      this.size = size;
@@ -19,8 +19,8 @@ class Dust
     if(pos.y >(height+size*0.5)){
       pos.y = (0-size*0.5);
       pos.x = random(0,width);
-      size = (int)random(1,4);
-       speed = (pressure*size)*0.02;
+      size = (int)random(1,4); //resets and randomises dust
+       speed = (pressure*size)*0.02; //dust movement is influenced by its size
     }
   }
   void Render(){
@@ -30,7 +30,7 @@ stroke(255);
     ellipse(pos.x, pos.y, size, size);
     fill(0);
     ellipse(pos.x- (size*0.25), pos.y - (size*0.25), size *0.09, size*0.09);
-    
+    //dust appearance
   }
   
 }

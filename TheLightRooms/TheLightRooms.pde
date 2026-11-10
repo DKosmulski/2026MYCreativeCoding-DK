@@ -1,6 +1,6 @@
 
 Room[] rooms = new Room[100];
-float fillspeed = 1;
+float fillspeed = 1; //framerate control
  void setup() {
  size(500,500);
  BuildRooms();
@@ -14,7 +14,7 @@ void draw(){
    for (int i =0; i <rooms.length; i++){
    Room r = rooms[i];
    if((i + 1) % person ==0){
-   r.LightSwitch();
+   r.LightSwitch(); //checks if dividing by the nr results in 0 and does the lightswitch code
    }
  
  }
@@ -27,7 +27,7 @@ r.Render();
  }
   person++;
      {
-  fillspeed +=0.8;
+  fillspeed +=0.8; //rooms start swapping faster over time
    }
   
 }
